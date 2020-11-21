@@ -22,10 +22,10 @@
           <div class="row">
             <div class="col-md-9 col-lg-8 mx-auto">
               <h3 class="login-heading mb-4">Registro de Tienda</h3>
-              <form action="TiendaController?action=insert" method="post">
+              <form action="ServicioController?action=insert" method="post">
               
                 <div class="form-label-group">
-                  <input type="input" id="inputFacebook" class="form-control"  name="Descripcion"  placeholder="Descripcion" required>
+                  <input type="input" id="inputFacebook" class="form-control"  name="descripcion"  placeholder="Descripcion" required>
                   <label for="inputFacebook">Descripcion</label>
                 </div>
                 <div class="form-label-group">
@@ -33,12 +33,13 @@
                   <label for="inputWeb">nombre</label>
                 </div>
                 <div class="form-label-group">
-                 <label>Tienda</label> <select class="form-control"
+                 
+                  <select class="form-control"
 						id="exampleFormControlSelect1" name="tienda">
 
 
-						</option>
-						<c:forEach items="${tiendaDAO.list() }" var="tienda">
+				
+						<c:forEach items="${tiendaDAO.list()}" var="tienda">
 
 							<option value="${tienda.id}">
 								<c:out value="${tienda.descripcion} " />
